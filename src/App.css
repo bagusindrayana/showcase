@@ -2,34 +2,6 @@ body {
   background-color: black;
 }
 
-header {
-  width: 100%;
-  position: fixed;
-}
-
-header .logo-bi {
-  float: left;
-  width: 150px;
-  margin: 10px;
-}
-
-header .logo-kaltim {
-  float: left;
-  width:30px;
-  margin: 10px;
-}
-
-header .logo-dekranasda {
-  float: right;
-  width: 45px;
-  margin: 10px;
-}
-
-header .logo-bbi {
-  float: right;
-  width: 45px;
-  margin: 10px;
-}
 
 #wrapper {
   display: block;
@@ -53,15 +25,6 @@ header .logo-bbi {
   filter: brightness(75%);
 }
 
-#container {
-  /* width: 100%;
-  height: 100vh; */
-  margin: auto;
-  left: 0;
-  right: 0;
-  position: fixed;
-  filter: brightness(50%);
-}
 
 .front-title {
   position: absolute;
@@ -75,6 +38,7 @@ header .logo-bbi {
   bottom: 0;
   color: white;
   background-color: transparent;
+  text-shadow: 4px 4px 4px #000000;
   
 }
 
@@ -113,73 +77,7 @@ header .logo-bbi {
   right: 0;
   bottom: 0;
   text-align: right;
-  font-size: 18px;
+  font-size: 30px;
   /* float: right; */
 }
 
-.gambar {
-  position: absolute;
-  
-  /* border-radius: 50%; */
-  background-color: red;
-}
-
-#screen {
-  height: 100px;
-  display: block;
-  width: 100px;
-  left: 0;
-  right: 0;
-  margin: 0;
-}
-
-#screen img {
-    
-  /* 
-   * Make the initial position to be the center of the circle you want this
-   * object follow.
-   */
-  position: absolute;
-  /* left: 315px;
-  top: 143px; */
-
-  /*
-   * Sets up the animation duration, timing-function (or easing)
-   * and iteration-count. Ensure you use the appropriate vendor-specific 
-   * prefixes as well as the official syntax for now. Remember, tools like 
-   * CSS Please are your friends!
-   */
-  -webkit-animation: myOrbit 10s linear infinite; /* Chrome, Safari 5 */
-     -moz-animation: myOrbit 10s linear infinite; /* Firefox 5-15 */
-       -o-animation: myOrbit 10s linear infinite; /* Opera 12+ */
-          animation: myOrbit 10s linear infinite; /* Chrome, Firefox 16+, 
-                                                    IE 10+, Safari 5 */
-  
-  
-  
-}
-
-/*
- * Set up the keyframes to actually describe the begining and end states of 
- * the animation.  The browser will interpolate all the frames between these 
- * points.  Again, remember your vendor-specific prefixes for now!
- */
- @-webkit-keyframes myOrbit {
-  from { -webkit-transform: rotate(0deg) rotate(0deg); }
-  to   { -webkit-transform: rotate(360deg)  rotate(-360deg); }
-}
-
-@-moz-keyframes myOrbit {
-  from { -moz-transform: rotate(0deg)  rotate(0deg); }
-  to   { -moz-transform: rotate(360deg)  rotate(-360deg); }
-}
-
-@-o-keyframes myOrbit {
-  from { -o-transform: rotate(0deg)  rotate(0deg); }
-  to   { -o-transform: rotate(360deg)  rotate(-360deg); }
-}
-
-@keyframes myOrbit {
-  from { transform: rotate(0deg)  rotate(0deg); }
-  to   { transform: rotate(360deg)  rotate(-360deg); }
-}

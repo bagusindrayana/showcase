@@ -123,9 +123,9 @@ class Orbit extends React.Component {
             </h1>
           </div>
           <div className="left-title">
-            <h3>
+            <h1>
               <span>Showcase of 2021</span>
-            </h3>
+            </h1>
           </div>
         </div>
       </div>
