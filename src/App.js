@@ -31,8 +31,8 @@ class Orbit extends React.Component {
     var imageObjects = [];
     for (let i = 0; i < 79; i++) {
       const img = new Image();
-      var w = 102.4;
-      var h = 57.6;
+      var w = randomInteger(75,100);
+      var h = randomInteger(75,100);
       // img.src = `/images/pic${i}.jpeg`;
       img.src = `https://picsum.photos/seed/${i}/${w}/${h}`
       imageObjects.push({
@@ -69,11 +69,14 @@ class Orbit extends React.Component {
 
         for (let i = 0; i < imageObjects.length; i++) {
           const imageObject = imageObjects[i];
-          context.drawImage(imageObject.image, 
-            (window.innerWidth/2-100) + (radius+offset) * Math.cos((speed) * imageObject.step),
-            (window.innerHeight/2-50) + (radius+offset) * Math.sin((speed) * imageObject.step),imageObject.width,imageObject.height);
-          //y.drawImage(imageObject.image, imageObject.x, imageObject.y);
-          imageObject.step += 0.04 + stepOffset;
+          try {
+            context.drawImage(imageObject.image, 
+              (window.innerWidth/2-100) + (radius+offset) * Math.cos((speed) * imageObject.step),
+              (window.innerHeight/2-50) + (radius+offset) * Math.sin((speed) * imageObject.step),imageObject.width,imageObject.height);
+            imageObject.step += 0.04 + stepOffset;
+          } catch (error) {
+            console.log(error)
+          }
         }
         step += 0.1;
         //console.log(step);
@@ -111,9 +114,7 @@ class Orbit extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        {/* {this.state.imgs} */}
         <canvas id="canvas" height="500" width="700"></canvas>
-        {/* <div id="container"></div> */}
         <div className="front-title" onMouseMove={this.moveCursorText} onClick={this.zoomCursor}>
           <p id="cursor">Enter Showcase</p>
           <div className="right-title">
